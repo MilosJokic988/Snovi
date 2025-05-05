@@ -1,0 +1,155 @@
+/* Globalni stilovi */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  
+  /* Centriranje aplikacije */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Minimalna visina ekrana */
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.card {
+  border: none;
+  background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 600px; /* Maksimalna širina */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.form-control, .form-select {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444;
+  width: 100%;
+}
+
+.btn-outline-light {
+  border-color: #888;
+  transition: background 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.toggle-button-group {
+  margin-bottom: 1.5rem;
+}
+
+::placeholder {
+  color: #bbb !important;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+}
+
+/* Responzivnost za mobilne uređaje */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .card {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .form-control, .form-select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .btn-outline-light {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .toggle-button-group {
+    margin-bottom: 1rem;
+  }
+
+  .card .btn-outline-danger {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .header {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .form-control, .form-select {
+    font-size: 0.85rem;
+  }
+
+  .btn-outline-light {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .card-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
